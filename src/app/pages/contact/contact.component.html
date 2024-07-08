@@ -1,6 +1,6 @@
 <div class="container pb-5">
   <div class="mt-5 text-size-20 border-animated pb-2">Contact Me</div>
-  <div class="mt-3 text-size-16 ">Let's connect! Reach out to discuss collaborations, opportunities, or simply to say hello. I look forward to
+  <div class="mt-3 text-size-16 component-desc">Let's connect! Reach out to discuss collaborations, opportunities, or simply to say hello. I look forward to
     hearing from you!</div>
   <div class="row mt-5">
     <div class="col-lg-6 col-sm-12 border rounded contact-form p-5">
@@ -16,7 +16,7 @@
                  required>
         </div>
         <div class="mt-4">
-          <button mat-raised-button type="submit" class="text-white contact-form-submit-btn"
+          <button mat-raised-button type="submit" class="text-app-color contact-form-submit-btn"
                   [disabled]="!contactForm.form.valid">Submit
           </button>
         </div>
@@ -29,7 +29,7 @@
           <div><a [href]="item.href" target="_blank">{{item.name}}</a></div>
         </div>
       </div>
-      <div class="text-size-16 fw-medium mt-3">My Mail Id : {{myEmailId}}</div>
+      <div class="text-size-16 fw-medium mt-3">Mail Id : {{myEmailId}}</div>
     </div>
   </div>
 </div>

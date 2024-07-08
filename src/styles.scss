@@ -1,1 +1,140 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.text-size-20{
+  font-size: var(--app-size-30px);
+}
+
+.text-size-15{
+  font-size: var(--app-size-15px);
+}
+
+.text-size-16{
+  font-size: var(--app-size-16px);
+}
+
+.text-size-18{
+  font-size: var(--app-size-18px);
+}
+.text-color{
+  color:var(--app-theme-color);
+}
+
+.bg-color{
+  background-color:var(--app-theme-color)
+}
+
+.light-theme {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+body.light-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark-theme {
+  --background-color: #242222;
+  --text-color: #ffffff;
+}
+
+body.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs>.mat-mdc-tab-header .mat-mdc-tab{
+  background-color: var(--app-theme-color);
+}
+
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color:black!important;
+}
+
+.mdc-tab__text-label{
+  color:white !important;
+}
+
+.nav-link-size{
+  font-size: var(--app-size-16px);
+  font-weight: 500;
+  @media (max-width: 700px) {
+      font-size: var(--app-size-14px);
+    margin:5px 0;
+    }
+
+}
+
+.mat-mdc-tab-header-pagination-chevron {
+  border-style: solid;
+  border-width: 3px 3px 0 0 !important;
+  height: 10px !important;
+  width: 10px !important;
+  border-color: var(--app-theme-color) !important;
+}
+
+.navbar-toggler{
+  font-size:15px;
+  padding:3px;
+}
+
+::-webkit-scrollbar {
+  height: var(--app-size-6px);
+  width: var(--app-size-6px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: var(--app-size-8px);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+}
+
+.component-desc{
+  line-height: 2;
+
+  @media (max-width: 768px) {
+    font-size: var(--app-size-14px);
+  }
+}
+
+//////////////////// Animated border to heading of each component
+
+@keyframes border-bottom-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+.border-animated {
+  position: relative;
+  display: inline-block;
+}
+
+.border-animated::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px; /* Adjust the height of the border */
+  background-color: var(--app-theme-color); /* Adjust the color of the border */
+  animation: border-bottom-animation 1s forwards;
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

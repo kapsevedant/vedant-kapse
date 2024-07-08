@@ -8,9 +8,8 @@
         <div class="justify-content-start about-me-div">
           <div class="text-size-20 my-name-section">Hello, I'm Vedant Kapse</div>
           <div class="text-size-20 my-3">Computer Engineer</div>
-          <div class="text-size-16 about-me text-justify">I am a motivated and versatile individual, always eager to
-            take on new challenges.
-            With a passion for learning I am dedicated to delivering high-quality results.
+          <div class="text-size-16 about-me text-justify component-desc">I am a motivated and versatile individual, always eager to
+            take on new challenges. With a passion for learning I am dedicated to delivering high-quality results.
             With a positive attitude and a growth mindset,
             I am ready to make a meaningful contribution and achieve great things.
           </div>
@@ -26,8 +25,9 @@
       </div>
     </div>
     <div class="col-12 mt-3">
-      <div class="text-size-18 fw-medium pb-2 cursor-pointer mb-2 mx-auto border-animated">My Experience </div>
-      <button mat-raised-button class="home-all-btns ms-5 text-white" (click)="toggleExperience()">Click to see <i class="fa-solid fa-arrow-down"></i></button>
+      <div class="text-size-18 fw-medium pb-2 cursor-pointer mb-2 mx-auto border-animated">My Experience</div>
+      <button mat-raised-button class="home-all-btns ms-5 text-white" (click)="toggleExperience()">Click to see <i
+        class="fa-solid fa-arrow-down"></i></button>
 
       <div *ngIf="toggleExperienceDiv" class="mt-4">
         <div class="border rounded p-3 experience-section fw-medium text-white" *ngFor="let item of experience">
@@ -35,9 +35,9 @@
             <div class="text-size-18">{{item.companyName}}</div>
             <div class="text-size-16">{{item.duration}}</div>
           </div>
-          <div class="mt-2" [innerHTML]="item.experienceDetails"></div>
-          <div class="text-size-16 mt-2">Skills : {{item.skills}}</div>
-          <div class="text-size-16 mt-2">Projects : {{item.projects}}</div>
+          <div class="mt-3 component-desc" [innerHTML]="item.experienceDetails"></div>
+          <div class="text-size-16 mt-3">Skills : {{item.skills}}</div>
+          <div class="text-size-16 mt-3">Projects : {{item.projects}}</div>
         </div>
       </div>
     </div>
