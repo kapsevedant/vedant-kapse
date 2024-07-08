@@ -1,0 +1,39 @@
+<div class="container pb-5">
+  <div class="mt-5 text-size-20 border-animated pb-2">Skills</div>
+  <div class="mt-3 text-size-16">Explore my skills in web development, design, and programming, showcasing my expertise
+    and projects in an easy-to-understand way.
+  </div>
+
+  <mat-tab-group class="mt-5">
+    <mat-tab label="Web Development">
+      <div class="row gap-5 mt-5 skills-div mx-auto">
+        <div *ngFor="let skill of webDev"
+             class="col-lg-2 col-md-2 col-sm-12 p-2 skills-child-div rounded-2 text-center justify-content-center align-items-center">
+          <span [ngClass]="skill.style" [innerHTML]="skill.icon" [matTooltip]="skill.name" class="skills-icons"></span>
+          <div class="text-app-color fw-medium">{{skill.name}}</div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Programming">
+      <div class="row gap-5 mt-5 skills-div mx-auto">
+        <div *ngFor="let skill of programming"
+             class="col-lg-2 col-md-2 col-sm-12 p-2 skills-child-div rounded-2 text-center justify-content-center align-items-center">
+          <span [ngClass]="skill.style" [innerHTML]="skill.icon" [matTooltip]="skill.name" class="skills-icons"></span>
+          <div class="text-app-color fw-medium">{{skill.name}}</div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Other">
+      <div class="row gap-5 mt-5 mx-auto">
+        <div *ngFor="let skill of otherSkills"
+             class="col-lg-2 col-md-2 col-sm-12 p-2 skills-child-div rounded-2 text-center justify-content-center align-items-center">
+          <span [ngClass]="skill.style" [innerHTML]="skill.icon" [matTooltip]="skill.name" class="skills-icons"></span>
+          <div class="text-app-color fw-medium">{{skill.name}}</div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+</div>
+
+

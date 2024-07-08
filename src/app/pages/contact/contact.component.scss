@@ -1,0 +1,32 @@
+.contact-form{
+  background-color: var(--app-theme-color);
+}
+
+.contact-form-submit-btn{
+  background-color:transparent;
+  border: 1px solid #fff;
+}
+
+.form-input-field{
+  border: 1px solid #fff;
+}
+
+.form-input-field::placeholder{
+  color:#fff;
+}
+
+.social-icons{
+  font-size: var(--app-size-50px);
+}
+
+.linkedin{
+  color:#0077B5;
+}
+
+.contact{
+color: #26C943;
+}
+
+.gmail{
+color: #FF4737;
+}

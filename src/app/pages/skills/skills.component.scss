@@ -1,0 +1,64 @@
+.skills-div{
+  max-height:400px;
+  overflow-y: scroll;
+}
+
+.skills-child-div{
+  border:2px solid var(--app-theme-color);
+  @media(max-width:700px) {
+    width:200px;
+margin:auto;
+}
+}
+
+.skills-icons {
+  font-size: 80px;
+}
+
+.angular {
+  color: #ec2089;
+}
+
+.js {
+  color: #efd81d;
+}
+
+.html {
+  color: #dd4b25;
+}
+
+.css {
+  color: #2862e9;
+}
+
+.react {
+  color: #5ed3f3;
+}
+
+.php{
+  color:#4d588e;
+}
+
+.sql{
+  color: #db7837;
+}
+
+.c{
+  color: #084a86;
+}
+
+.java{
+  color:#507e9c;
+}
+
+.git{
+  color: #e84e31;
+}
+
+.bitbucket{
+  color:#2d88ff;
+}
+
+.bootstrap{
+  color:#7818f7;
+}

@@ -1,0 +1,37 @@
+.copyright-div{
+  bottom:1px;
+  right:1px;
+  position: fixed;
+  background:transparent;
+}
+
+@keyframes border-animate {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+.nav-link.active {
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Adjust the height of the border as needed */
+  background-color: var(--app-theme-color);
+  animation: border-animate 0.5s ease-in-out; /* Adjust the duration as needed */
+}
+
+@media (max-width: 800px) {
+  .fa-sun{
+    font-size:20px;
+  }
+}

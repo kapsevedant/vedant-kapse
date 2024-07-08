@@ -1,0 +1,45 @@
+.home-container {
+
+  padding-bottom: 60px;
+
+  .my-photo-div {
+    width: 400px;
+    height: 400px;
+  }
+
+  .about-me-div {
+
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .float-animation {
+    animation: float 2s ease-in-out infinite;
+  }
+
+  .home-all-btns {
+    background-color: var(--app-theme-color);
+  }
+
+  .about-me {
+    line-height: 1.6;
+  }
+
+  .experience-section {
+    background-color: var(--app-theme-color);
+  }
+
+  .my-name-section {
+    line-height: 1
+  }
+}

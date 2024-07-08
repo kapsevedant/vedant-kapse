@@ -1,0 +1,24 @@
+<div class="container pb-5">
+  <div class="mt-5 text-size-20 pb-2 border-animated">Education</div>
+  <div class="mt-3 text-size-16">Explore my journey through academia, showcasing my passion for learning and dedication
+    to excellence in education
+    and research.
+  </div>
+  <div class="row mx-auto position-relative mt-5">
+    <div *ngFor="let details of educationDetails;let i = index">
+      <div class="col-12 rounded-1 border p-2 bg-color text-white p-2">
+        <div class="d-flex justify-content-between mt-1">
+          <div class="fw-medium text-size-16">{{details.educationName}}</div>
+          <div>{{details.duration}}</div>
+        </div>
+        <div class="mt-1 text-size-18 mt-2">{{details.collegeName}}</div>
+        <div class="mt-1 text-size-16 fw-medium mt-2">{{details.score}}</div>
+      </div>
+      <div class="my-3 text-center" *ngIf="i < educationDetails.length - 1">
+        <i class="fa-solid fa-circle-arrow-up text-size-20 text-app-color"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+

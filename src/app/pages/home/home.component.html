@@ -1,0 +1,45 @@
+<div class="home-container">
+  <div class="w-75 mx-auto">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+        <img class="img-fluid my-photo-div float-animation" src="assets/dev-img.svg"/>
+      </div>
+      <div class="col-lg-6 col-md-6 sol-sm-12 my-auto">
+        <div class="justify-content-start about-me-div">
+          <div class="text-size-20 my-name-section">Hello, I'm Vedant Kapse</div>
+          <div class="text-size-20 my-3">Computer Engineer</div>
+          <div class="text-size-16 about-me text-justify">I am a motivated and versatile individual, always eager to
+            take on new challenges.
+            With a passion for learning I am dedicated to delivering high-quality results.
+            With a positive attitude and a growth mindset,
+            I am ready to make a meaningful contribution and achieve great things.
+          </div>
+          <div class="mt-3">
+            <button mat-raised-button class="home-all-btns"><a class="mt-3 text-white text-decoration-none"
+                                                               href="assets/VEDANT_KAPSE_RESUME.pdf"
+                                                               download="vedant_resume.pdf">
+              My Resume
+            </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 mt-3">
+      <div class="text-size-18 fw-medium pb-2 cursor-pointer mb-2 mx-auto border-animated">My Experience </div>
+      <button mat-raised-button class="home-all-btns ms-5 text-white" (click)="toggleExperience()">Click to see <i class="fa-solid fa-arrow-down"></i></button>
+
+      <div *ngIf="toggleExperienceDiv" class="mt-4">
+        <div class="border rounded p-3 experience-section fw-medium text-white" *ngFor="let item of experience">
+          <div class="d-flex justify-content-between">
+            <div class="text-size-18">{{item.companyName}}</div>
+            <div class="text-size-16">{{item.duration}}</div>
+          </div>
+          <div class="mt-2" [innerHTML]="item.experienceDetails"></div>
+          <div class="text-size-16 mt-2">Skills : {{item.skills}}</div>
+          <div class="text-size-16 mt-2">Projects : {{item.projects}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

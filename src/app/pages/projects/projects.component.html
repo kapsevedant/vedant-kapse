@@ -1,0 +1,12 @@
+<div class="container pb-5">
+  <div class="mt-5 text-size-20 border-animated pb-2">Projects</div>
+  <div class="mt-3 text-size-16">Explore my portfolio showcasing innovative projects and skills in web development, design, and digital solutions for diverse industries.</div>
+  <div class="row mx-auto gap-5 mt-5">
+    <div class="col-lg-6 col-md-6 col-sm-12 rounded border p-3 bg-color" *ngFor="let project of projects" style="width: 28rem">
+      <div class="my-2 text-size-18 fw-medium text-white">{{project.name}}</div>
+      <div class="mty-2"><img [src]=project?.image class="project-images"></div>
+      <div class="my-2 fw-medium text-size-16 text-white">{{project.technologies}}</div>
+      <div><button mat-raised-button class="bg-white"><a class="text-app-color text-decoration-none" href="https://github.com/kapsevedant/"> View project on Github</a></button></div>
+    </div>
+  </div>
+</div>
