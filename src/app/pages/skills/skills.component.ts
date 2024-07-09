@@ -6,6 +6,10 @@ import {Component} from '@angular/core';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+
+  protected skillsHeading: string = "Skills";
+  protected skillsDescription: string = "Explore my skills in web development, design, and programming, showcasing my expertise and projects in an easy-to-understand way.";
+
   constructor() {
   }
 

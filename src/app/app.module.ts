@@ -18,6 +18,8 @@ import {MatDialogModule} from "@angular/material/dialog";
 import { CopyrightModalComponent } from './shared-components/copyright-modal/copyright-modal.component';
 import {MatButtonModule} from "@angular/material/button";
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './pages/about/about.component';
+import {MatExpansionModule} from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     SkillsComponent,
     ProjectsComponent,
     ContactComponent,
-    CopyrightModalComponent
+    CopyrightModalComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatTooltip,
     MatDialogModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatExpansionModule
   ],
   providers: [
     provideClientHydration(),

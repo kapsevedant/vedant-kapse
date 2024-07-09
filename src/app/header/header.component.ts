@@ -22,9 +22,9 @@ export class HeaderComponent {
       icon:`<i class="fa-solid fa-house"></i>`,
     },
     {
-      name:'Education',
-      routerLink:'education',
-      icon:`<i class="fa-solid fa-building-columns"></i>`
+      name:'About',
+      routerLink:'about',
+      icon:`<i class="bi bi-file-person"></i>`
     },
     {
       name:'Skills',
@@ -34,7 +34,7 @@ export class HeaderComponent {
     {
       name:'Projects',
       routerLink:'projects',
-      icon: `<i class="fa-solid fa-computer"></i>`
+      icon: `<i class="fa-solid fa-laptop"></i>`
     },
     {
       name:'Contact',

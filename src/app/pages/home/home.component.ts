@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, effect, NgZone, signal} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,9 +6,21 @@ import {Component} from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-protected toggleExperienceDiv : boolean = false;
-  constructor() {
+  protected toggleExperienceDiv: boolean = false;
+  private phrases = ['Computer Engineer', 'Web Developer'];
+  private currentPhraseIndex = 0;
+  private isDeleting = false;
+  typedText = signal('');
+
+  constructor(private ngZone: NgZone) {
   }
+
+  ngOnInit() {
+    this.ngZone.runOutsideAngular(() => {
+      this.animateText();
+    });
+  }
+
   protected experience = [
     {
       companyName: 'Locationguru Solutions Pvt. Ltd.',
@@ -24,9 +36,37 @@ protected toggleExperienceDiv : boolean = false;
     }
   ];
 
-  protected toggleExperience(){
-    setTimeout(()=>{
+  protected toggleExperience() {
+    setTimeout(() => {
       this.toggleExperienceDiv = !this.toggleExperienceDiv;
-    },200)
+    }, 200)
+  }
+
+  private animateText() {
+    const currentPhrase = this.phrases[this.currentPhraseIndex];
+    const currentText = this.typedText();
+
+    if (this.isDeleting) {
+      this.typedText.set(currentText.slice(0, -1));
+    } else {
+      this.typedText.set(currentPhrase.slice(0, currentText.length + 1));
+    }
+
+    let typingSpeed = this.isDeleting ? 150 : 200; // Slower typing and deleting
+
+    if (!this.isDeleting && currentText === currentPhrase) {
+      typingSpeed = 2000; // Longer pause at end of phrase
+      this.isDeleting = true;
+    } else if (this.isDeleting && currentText === '') {
+      this.isDeleting = false;
+      this.currentPhraseIndex = (this.currentPhraseIndex + 1) % this.phrases.length;
+      typingSpeed = 1000; // Pause before starting new phrase
+    }
+
+    setTimeout(() => {
+      this.ngZone.run(() => {
+        this.animateText();
+      });
+    }, typingSpeed);
   }
 }

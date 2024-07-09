@@ -8,7 +8,9 @@
   }
 
   .about-me-div {
-
+   @media (max-width: 768px) {
+     text-align:center;
+   }
   }
 
   @keyframes float {
@@ -35,11 +37,25 @@
     line-height: 1.6;
   }
 
-  .experience-section {
-    background-color: var(--app-theme-color);
+  .my-name-section {
+    line-height: 1.3
   }
 
-  .my-name-section {
-    line-height: 1
+  .home-sub-container{
+    margin-top:80px;
+
+    @media (max-width: 768px) {
+      margin-top:0px;
+    }
+  }
+
+  .cursor {
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
   }
 }

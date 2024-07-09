@@ -1,0 +1,25 @@
+.about-container{
+  .college-name{
+    @media (max-width: 800px) {
+      font-size:14px;
+    }
+  }
+
+  .company-name{
+    @media (max-width: 800px) {
+      font-size: 16px;
+    }
+  }
+
+  .degree-name{
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
+  }
+
+  .degree-aggregate{
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
+  }
+}

@@ -8,10 +8,12 @@ import {Constants} from "../../../utils/constant";
 })
 export class ProjectsComponent {
 
-  protected portfolioImg:string = Constants.projectImages.portfolioImg;
-  protected majorProject:string = Constants.projectImages.majorProject;
-  protected miniProject:string = Constants.projectImages.miniProject;
-  protected invoice:string = Constants.projectImages.invoice;
+  protected portfolioImg: string = Constants.projectImages.portfolioImg;
+  protected majorProject: string = Constants.projectImages.majorProject;
+  protected miniProject: string = Constants.projectImages.miniProject;
+  protected invoice: string = Constants.projectImages.invoice;
+  protected projectsHeading: string = "Projects";
+  protected projectsDescription: string = "Explore my portfolio showcasing innovative projects and skills in web development, design, and digital solutions for diverse industries."
 
   constructor() {
   }

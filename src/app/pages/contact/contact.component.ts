@@ -8,6 +8,8 @@ import Swal from 'sweetalert2';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  protected contact:string="Contact Me";
+  protected contactDescription:string="Let's connect! Reach out to discuss collaborations, opportunities, or simply to say hello. I look forward to hearing from you!"
   protected myEmailId: string = 'vedantkapse2020@gmail.com';
   protected userName!: string;
 
